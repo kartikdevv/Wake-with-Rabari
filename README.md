@@ -1,2 +1,2 @@
-# Wake-with-Rabari
-Rabari culture
+# Rabari
+ 

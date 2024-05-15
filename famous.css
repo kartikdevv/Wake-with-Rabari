@@ -1,0 +1,170 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+@font-face {
+    font-family: Rajasthan_regular;
+    src: url(Rajasthan\ Regular.ttf);
+    font-display: swap;
+}
+body{
+    min-height: 150vh;
+    background-image: url("slider bg/slider bg.png");
+    background-size: contain;
+}
+
+/* navigation bar */
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: 0.6s;
+    padding: 40px 100px;
+    z-index: 1000;
+    height: 5rem;
+}
+header .logo{
+    position: relative;
+    font-weight: 700;
+    color: black;
+    text-decoration: none;
+    text-align: center;
+    font-size: 2em;
+    letter-spacing: 2px;
+    transition: 0.6s;
+    font-family: Rajasthan_regular;
+}
+header ul{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header ul li{
+    position: relative;
+    list-style: none;
+}
+header ul li a{
+    position: relative;
+    margin: 0 15;
+    text-decoration: none;
+    color: black;
+    letter-spacing: 2px;
+    font-weight: 500px;
+    transition: 0.6s;
+    margin-left: 6rem;
+    font-size: 1.5rem;
+    font-family: Rajasthan_regular;
+}
+
+
+.links:hover{
+    transition: none;
+    color: #cd5424;
+}
+.contact:hover{
+    background-color: #cd5424;
+    transition: none;
+}
+
+
+header.sticky{
+    padding: 5px 100px;
+    background-color: #113247;
+}
+header.sticky .logo,header.sticky ul li a{
+    color: white;
+}
+
+
+#navigation_space{
+    height: 10rem;
+}
+
+/* box 1 */
+
+.box1{
+    display: flex;
+    justify-content: space-evenly;
+    margin-left: 5rem;
+}
+
+.text1{
+    width: 45%;
+    height: 30rem;
+    text-align: justify ;
+    font-size: 125%;
+}
+
+
+#img_1{
+    background-image: url("culture img/img\ 1.png");
+    height: 20rem;
+    width: 36vw;
+    background-size:cover;
+    background-repeat: no-repeat;
+}
+
+.img_border_1{
+    margin-top: 1rem;
+    height: 21rem;
+    width: 37vw;
+    border: 2px solid grey;
+    padding:5px 0px 5px 5px;
+}
+
+.text1_1{
+    width: 83vw;
+    text-align: justify ;
+    font-size: 125%;
+    margin-left: 9.5rem;
+}
+/* box 2 */
+
+.box2{
+    display: flex;
+    justify-content: space-evenly;
+    margin-left: 1rem;
+}
+
+#img_2{
+    background-image: url("culture img/img 2.png");
+    height: 20rem;
+    width: 22vw;
+    background-size:contain;
+    background-repeat: no-repeat;
+
+}
+
+.text2{
+    width: 45%;
+    height: 30rem;
+    text-align: justify ;
+    font-size: 125%;
+    margin-top: 1rem;
+}
+
+
+.img_border_2{
+    height: 21rem;
+    width: 23vw;
+    border: 2px solid grey;
+    padding:5px 0px 5px 15px;
+}
+
+.border{
+    margin-top: 10rem ;
+    background-image: url("slider photos/border.png");
+    height: 5rem;
+    width: 100%;
+    background-size: cover;
+}

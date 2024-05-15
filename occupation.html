@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>occupation</title>
+    <script defer src="website.js"></script>
+    <link rel="stylesheet" href="occupation.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <!-- navigation -->
+    <header>
+        <a href="index.html" class="logo">Rabari</a>
+        <ul>
+            <li><a href="index.html" class="links">Home</a></li>
+            <li><a href="About us.html" class="links">About us</a></li>
+            <li><a href="FAQs.html" class="links">FAQs</a></li>
+        </ul>
+    </header>
+
+    <div id="navigation_space"></div>
+
+    <!-- body -->
+    
+    <div class="box1">
+        <div id="text1">
+
+            <p style="margin-top: 1rem;"> The occupation of the Rabari is intimately tied to their culture and way of life. Herding is not just a means of livelihood for them, but a way of being in the world. It shapes their identity, their social relations, and their spiritual beliefs. </p>
+            <br>
+            <p>The Rabari also have a complex social organization based on their occupation. They are divided into different sub-tribes, each with its own distinct identity and customs. Within each sub-tribe, there are different clans, each with its own herding territory and social hierarchy. The Rabari also have a system of marriage and kinship that is closely tied to their occupation, with different rules and rituals for different groups.</p>
+        </div>
+
+        <div class="frame_border">
+            <div class="slider-container">
+                <button class="pre-btn" ><i class="fa-solid fa-caret-left"></i></button>
+                <button class="nxt-btn"><i class="fa-solid fa-caret-right"></i></button>
+                <div class="slider-track">
+                  <img src="occupation slider/img 1.jpg" alt="Image 1" class="slide">
+                  <img src="occupation slider/img 2.webp" alt="Image 2" class="slide">
+                  <img src="occupation slider/img 3.jpg" alt="Image 3" class="slide">
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <div class="box2">
+        <p>For the Rabari, cattle are not just animals, but living beings with whom they share a deep bond of affection and respect. They have a rich vocabulary for describing the different characteristics and behaviors of their cattle, and believe that each animal has a unique personality and soul. Despite the challenges of their occupation, the Rabari have managed to adapt and thrive over the centuries. They have developed a range of skills and knowledge that enable them to survive in the desert environment, including traditional techniques for water harvesting, animal husbandry, and food preservation.</p>
+        <br>
+        <p>In recent years, however, the occupation of the Rabari has come under threat from various factors. The expansion of agriculture, mining, and urbanization has led to the loss of grazing land and water sources, making it increasingly difficult for the Rabari to sustain their herds. The changing climate has also had an impact on their occupation, with more frequent droughts and extreme weather events affecting the availability of water and fodder.</p>
+        <br>
+        <p>In addition to these environmental challenges, the Rabari also face social and economic pressures. The rise of commercial dairying and industrial livestock production has made it difficult for them to compete in the market. The younger generation is increasingly drawn to urban lifestyles and alternative occupations, leading to a decline in the number of people willing to follow the traditional way of life. Despite these challenges, the Rabari are determined to preserve their occupation and way of life. They have formed cooperatives and associations to promote their products and protect their rights. They have also been involved in advocacy work to raise awareness about the importance of pastoralism and the threats to their occupation.</p>
+    </div>
+
+    <div class="border"></div>
+</body>
+
+<script type="text/javascript">
+    const sliderTrack = document.querySelector('.slider-track');
+    const slides = document.querySelectorAll('.slide');
+
+    let currentSlide = 0; // Keep track of the current slide index
+
+    // Function to move to a specific slide
+    function goToSlide(slideIndex) {
+        sliderTrack.style.transform = `translateX(-${slideIndex * 100}%)`;
+        currentSlide = slideIndex;
+    }
+
+    // Add click event listeners to navigation buttons (replace with your button elements)
+    const nextButton = document.querySelector('.nxt-btn'); // Replace with your selector
+    const prevButton = document.querySelector('.pre-btn'); // Replace with your selector
+
+    if (nextButton) {
+        nextButton.addEventListener('click', () => {
+            const nextSlide = currentSlide + 1;
+            if (nextSlide === slides.length) {
+            goToSlide(0); // Loop back to the first slide
+            } else {
+            goToSlide(nextSlide);
+            }
+        });
+    }
+
+    if (prevButton) {
+        prevButton.addEventListener('click', () => {
+            const prevSlide = currentSlide - 1;
+            if (prevSlide < 0) {
+            goToSlide(slides.length - 1); // Loop back to the last slide
+            } else {
+            goToSlide(prevSlide);
+            }
+        });
+    }
+
+    // (Optional) Add keyboard navigation (replace with your keypress events)
+    document.addEventListener('keydown', (event) => {
+    if (event.key === 'ArrowRight') {
+        const nextSlide = currentSlide + 1;
+        if (nextSlide === slides.length) {
+            goToSlide(0);
+        } else {
+            goToSlide(nextSlide);
+        }
+    } else if (event.key === 'ArrowLeft') {
+        const prevSlide = currentSlide - 1;
+        if (prevSlide < 0) {
+            goToSlide(slides.length - 1);
+        } else {
+            goToSlide(prevSlide);
+        }
+    }
+    });
+
+</script>
+</html>

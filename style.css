@@ -1,0 +1,693 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+@font-face {
+    font-family: Rajasthan_regular;
+    src: url(Rajasthan\ Regular.ttf);
+    font-display: swap;
+}
+body{
+    min-height: 200vh;
+}
+
+/* navigation bar */
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: 0.6s;
+    padding: 40px 100px;
+    z-index: 1000;
+    height: 5rem;
+}
+header .logo{
+    position: relative;
+    font-weight: 700;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    font-size: 2em;
+    letter-spacing: 2px;
+    transition: 0.6s;
+    font-family: Rajasthan_regular;
+}
+header ul{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header ul li{
+    position: relative;
+    list-style: none;
+}
+header ul li a{
+    position: relative;
+    margin: 0 15;
+    text-decoration: none;
+    color: white;
+    letter-spacing: 2px;
+    font-weight: 500px;
+    transition: 0.6s;
+    margin-left: 6rem;
+    font-size: 1.5rem;
+    font-family: Rajasthan_regular;
+}
+
+
+.links:hover{
+    transition: none;
+    color: #cd5424;
+}
+.contact:hover{
+    background-color: #cd5424;
+    transition: none;
+}
+
+
+header.sticky{
+    padding: 5px 100px;
+    background-color: #113247;
+}
+header.sticky .logo,header.sticky ul li a{
+    color: white;
+}
+
+
+
+.off-screen-menu{
+    background-color: black;
+    height: 100vh;
+    width: 100%;
+    max-width: 450px;
+    position: fixed;
+    top:0;
+    right: -450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-size: 3rem;
+    transition: .3s ease;
+}
+
+.off-screen-menu.active{
+    right: 0;
+}
+
+.ham-menu{
+    height: 50px;
+    width: 50px;
+    margin-left: auto;
+    position: relative;
+}
+
+.ham-menu span{ 
+    height: 5px;
+    width: 100%;
+    background-color:#6F86FF;
+    border-radius: 25px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    transition: .3s ease;
+}
+
+.ham-menu span:nth-child(1){
+    top: 25%;
+}
+
+.ham-menu span:nth-child(3){
+    top: 75%;
+}
+
+.ham-menu.active span:nth-child(1){
+    top: 50%;
+    transform: translate(-50% , -505) rotate(45deg);
+}
+
+.ham-menu.active span:nth-child(2){
+    opacity: 0;
+}
+
+.ham-menu.active span:nth-child(3){
+    top: 50%;
+    transform: translate(-50% , -505) rotate(-45deg);
+}
+/* slider */
+
+.slider-container {
+    width: 100%;
+    overflow: hidden;
+    top: 0%;
+    left: 0%;
+    height: 44rem;
+}
+
+.slider {
+    display: flex;
+    height: 40rem;
+    width: calc(100vw*14);
+    background-size: cover;
+    animation: slide 30s infinite ;
+}
+
+.slide {
+    width: 100vw;
+    height: 40rem;
+    background-size: cover;
+    flex: 0 0 auto;
+}
+
+img {
+    width: 100vw;
+    height: 46rem;
+    display: flex;
+    background-size: cover;
+}
+
+#text{
+    z-index: 10000; 
+    color: white; 
+    height: 5rem;
+    position: absolute;
+    
+}
+@keyframes slide {
+    0%{
+        transform: translateX(0%);
+    }
+    10%{
+        transform: translateX(calc(-100vw));
+    }
+    17%{
+        transform: translateX(calc(-100vw));
+    }
+    23%{
+        transform: translateX(calc(-100vw*2));
+    }
+    34%{
+        transform: translateX(calc(-100vw*2));
+    }
+    40%{
+        transform: translateX(calc(-100vw*3));
+    }
+    51%{
+        transform: translateX(calc(-100vw*3));
+    }
+    57%{
+        transform: translateX(calc(-100vw*4));
+    }
+    68%{
+        transform: translateX(calc(-100vw*4));
+    }
+    74%{
+        transform: translateX(calc(-100vw*5));
+    }
+    85%{
+        transform: translateX(calc(-100vw*5));
+    }
+    91%{
+        transform: translateX(calc(-100vw*6));
+    }
+    
+    100%{
+        transform: translateX(calc(-100vw*6));
+    }
+    
+
+    
+}
+
+
+/* border */
+
+#border{
+    background-image: url("slider photos/border2.png");
+    position: relative;
+    height: 4rem;
+    width: 100%;
+    background-size: contain;
+}
+
+
+/* page 2 */
+
+.page_2{
+    height: 50rem;
+    width: 100%;
+    background-color: #132536;
+    background-image: url("bg.png");
+    background-size: cover;
+    padding-top: 10rem;
+}
+.page_2 .no-padding {
+    padding: 0;
+}
+.img_container{
+    width: 100%;
+    height: 20rem;
+    display: flex;
+}
+
+.images{
+    height: 20rem;
+    width: 35rem;
+    overflow: hidden;
+}
+
+.img_text {
+    position: relative;
+    text-decoration: none;
+    bottom: 5rem;
+    left: 16px;
+    color: white;
+    font-size: 3rem;
+}
+
+
+/* page 2 slider */
+
+.img_container{
+    overflow: hidden;
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 94%;
+    margin-left: 2rem;
+     
+}
+.theme-image{
+    overflow: hidden;
+
+}
+.theme-img{
+    height: 15rem;
+    width: 24.5rem;
+    margin-right: 0rem;
+    margin-left: 4rem;
+}
+
+.theme-name{
+    position: absolute;
+    color: white;
+    font-size: 4rem;
+    top: 155%;
+    transform: translateY(-50%);
+    transform: translatex(60%);
+
+}
+
+.pre-btn , .nxt-btn{
+    font-size: 2rem;
+    opacity: .2;
+    position: absolute;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    padding-left: .5rem;
+    padding-right: .5rem;
+    transition: transform 5s  ease-in-out;
+    z-index: 100;
+}
+
+.pre-btn{
+    left: 1;
+    margin-top:12%;
+    margin-right: 1rem;
+}
+.nxt-btn{
+    right:0;
+    margin-top:12%;
+    margin-right: 2rem;
+}
+
+.pre-btn:hover , .nxt-btn:hover{
+    opacity: 1;
+}
+
+
+/* page 3 */
+
+.interview{
+    height: 50rem;
+    background-image: url("bg.png");
+    background-size: cover;
+    display: flex;
+
+}
+
+#border_2{
+    background-image: url("slider photos/border2.png");
+    position: relative;
+    height: 4rem;
+    width: 100%;
+    background-size: contain;
+}
+
+#page3_Video{
+    position: absolute;
+    height: 20rem;
+    margin: 15% 10%;
+}
+
+#interview_video{
+    position: relative;
+    height: 20rem;
+    margin: 15% 10%;
+}
+.profile{
+    background-image: url("page 3/profile.jpg");
+    background-size: cover;
+    position: absolute;
+    background-color: pink;
+    height: 10rem;
+    width: 10rem;
+    border-radius: 50%;
+    margin: 15% 55%;
+}
+
+.profile_name{
+    width: 20rem;
+    display: flex;
+    position: absolute;
+    color: white;
+    font-size: 2rem;
+    margin:18% 68% ;
+    font-family: rajasthan_regular;
+}
+
+.interview_text{
+    width: 30rem;
+    display: flex;
+    position: absolute;
+    color: white;
+    font-size: 1.75rem;
+    margin:28% 55% ;
+    text-align: justify;
+    font-family:serif;
+}
+
+/* scrolling video */
+
+.image-sequence{
+    position: relative;
+    height: 20rem;
+    z-index: 10;
+    pointer-events: none; /* So that the image doesn't interfere with scrolling */
+    transition: opacity 0.5s; /* Smooth transition for opacity changes */
+    opacity: 1  ; 
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.image-card {
+    position: relative;
+}
+.camel-container {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 300px;
+    z-index: 999; /* Ensure the camel is above other content */
+}
+
+.camel{
+    width: 100%; /* Adjust width as needed */
+    height: 300px; /* Adjust height as needed */
+    background-size: cover;
+    padding-bottom: 0rem;
+    bottom: 0;
+    transition: transform 3s ease; /* Add smooth transition */
+}
+
+
+/* page 4 */
+
+#history{
+    font-family: rajasthan_regular;
+    color: white;
+    margin-left: 34vw;
+    padding-top: 5rem;
+    font-size: 3rem;
+}
+
+.history{
+    height: 70rem;
+    background-image: url("bg/Great-Rann-Of-Kutch-Banner.jpg");
+    background-size: cover;
+    display: flex;
+
+}
+
+.border_2{
+    padding: 0;
+    height: 7rem;
+    width: 100%;
+    background-size: cover;
+}
+
+.history_pic{
+    background-image: url("page 4/raja.jpg");
+    position: absolute;
+    height: 20rem;
+    background-size: cover;
+    width: 25rem;
+}
+
+
+.history_pic_border{
+    padding-left: .75rem;
+    padding-top: .5rem;
+    position: absolute;
+    height:  21.5rem  ;
+    width: 26.5rem;
+    margin: 5% 63%;
+    border: 3px solid grey;
+}
+
+
+
+.history_text{
+    width: 43rem;
+    display: flex;
+    position: absolute;
+    color: white;
+    font-size: 1.75rem;
+    font-family:serif;
+    margin-left: 9rem;
+    margin-top: 5rem;
+    line-height: 40px;
+    text-align: justify;
+}
+
+.history_pic_2{
+    background-image: url("page 4/map.jpg");
+    position: absolute;
+    height: 20rem;
+    background-size: cover;
+    width: 25rem;
+}
+
+
+.history_pic_border_2{
+    padding-left: .75rem;
+    padding-top: .5rem;
+    position: absolute;
+    height:  21.5rem  ;
+    width: 27rem;
+    margin: 36% 9%;
+    border: 3px solid grey;
+}
+
+.history_text_2{
+    width: 43rem;
+    display: flex;
+    position: absolute;
+    color: white;
+    font-size: 1.75rem;
+    font-family:serif;
+    margin-left: 43rem;
+    margin-top: 34rem;
+    line-height: 40px;
+    text-align: justify;
+}
+
+/* paralax */
+
+.paralax{
+    height: 160vh;
+    background-image: url("bg.png");
+    background-size: cover;
+    background-attachment: fixed;
+}
+/* footer */
+
+.footer{
+    background-color: #113247;
+    height: 105vh;
+}
+/* sotware */
+
+.softwares{
+    font-size: 1.75rem;
+    color: black;
+    padding-top: 5rem;
+    margin-bottom: 3rem;
+    font-weight: 900;
+    font-family: rajasthan_regular;
+    text-align: center;
+}
+
+.sotware_img{
+    display: flex;
+    justify-content: space-evenly;
+}
+.pic_1{
+    background-image: url("software/ae.jpg");
+    background-size: cover;
+    height: 6rem;
+    width:  6rem;
+    border-radius: 20px;
+}
+.pic_2{
+    background-image: url("software/ai.jpg");
+    background-size: cover;
+    height: 6rem;
+    width:  6rem;
+    border-radius: 20px;
+}
+.pic_3{
+    background-image: url("software/blender.png");
+    background-size:contain;
+    height: 6rem;
+    width:  6rem;
+    border-radius: 20px;
+}
+.pic_4{
+    background-image: url("software/me.jpg");
+    background-size: cover;
+    height: 6rem;
+    width:  6rem;
+    border-radius: 20px;
+}
+.pic_5{
+    background-image: url("software/ps.jpg");
+    background-size: cover;
+    height: 6rem;
+    width:  6rem;
+    border-radius: 20px;
+}
+.pic_6{
+    background-image: url("software/vs.jpg");
+    background-size: cover;
+    height: 6rem;
+    width:  6rem;
+    border-radius: 20px;
+}
+/* links */
+
+.sources{
+    font-size: 1.75rem;
+    color: black;
+    padding-top: 5rem;
+    margin-bottom: 3rem;
+    font-weight: 900;
+    font-family: rajasthan_regular;
+    text-align: center;
+}   
+
+.footer_links{
+    text-decoration: none;
+    color: white;
+    font-size: 1.75rem;
+
+}
+
+.I{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 13rem;
+    margin-left: 2rem;
+    margin-bottom: 1.5rem;
+}
+.I_1{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 14rem;
+    margin-left: 3rem;
+    margin-bottom: 1.5rem;
+}
+.I_2{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 9rem;
+    margin-left: 3rem;
+    margin-bottom: 1.5rem;
+}
+.I_3{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 11rem;
+    margin-left: 3rem;
+    margin-bottom: 1.5rem;
+}
+.I_4{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 11.5rem;
+    margin-left: 3rem;
+    margin-bottom: 1.5rem;
+}
+.I_5{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width:8.5rem;
+    margin-left: 3rem;
+    margin-bottom: 1.5rem;
+}
+.I_6{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width:8.5rem;
+    margin-left: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.I:hover , .I_1:hover , .I_2:hover , .I_3:hover , .I_4:hover , .I_5:hover , .I_6:hover{
+    color: #cd5424;
+}
+
+.sources_links{
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.sources_link_2{
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}

@@ -1,0 +1,353 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+@font-face {
+    font-family: Rajasthan_regular;
+    src: url(Rajasthan\ Regular.ttf);
+    font-display: swap;
+}
+body{
+    min-height: 100vh;
+    display: grid;
+    background-image: url("slider bg/slider bg.png");
+    background-size: contain;
+}
+
+
+
+/* navigation bar */
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: 0.6s;
+    padding: 40px 100px;
+    z-index: 1000;
+    height: 5rem;
+}
+header .logo{
+    position: relative;
+    font-weight: 700;
+    color: black;
+    text-decoration: none;
+    text-align: center;
+    font-size: 2em;
+    letter-spacing: 2px;
+    transition: 0.6s;
+    font-family: Rajasthan_regular;
+}
+header ul{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header ul li{
+    position: relative;
+    list-style: none;
+}
+header ul li a{
+    position: relative;
+    margin: 0 15;
+    text-decoration: none;
+    color: black;
+    letter-spacing: 2px;
+    font-weight: 500px;
+    transition: 0.6s;
+    margin-left: 6rem;
+    font-size: 1.5rem;
+    font-family: Rajasthan_regular;
+}
+
+
+.links:hover{
+    transition: none;
+    color: #cd5424;
+}
+.contact:hover{
+    background-color: #cd5424;
+    transition: none;
+}
+
+
+header.sticky{
+    padding: 5px 100px;
+    background-color: #113247;
+}
+header.sticky .logo,header.sticky ul li a{
+    color: white;
+}
+#navigation_space{
+    height: 10rem;
+}
+
+/* about us */
+#top_text{
+    width: 75vw;
+    font-size: 1.5rem;
+    margin-left: 13vw;
+}
+.Main{
+    width: 60vw;
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-left: 20vw;
+    margin-top: 5rem;
+}
+.Main2{
+    width: 80vw;
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 10vw;
+    margin-top: 5rem;
+}
+/* person 1 */
+.person1{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 25rem;
+}
+.profile1{
+    border-radius: 50%;
+    background-image: url("pictures/anmol.jpg");
+    background-size: contain;
+    height: 10rem;
+    width: 10rem;
+    position: relative;
+}
+
+.student1{
+    font-size: 1.5rem;  
+}
+
+/* person 2 */
+
+.person2{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 25rem;
+}
+.profile2{
+    border-radius: 50%;
+    background-image: url("pictures/Aana\ Jessica\ Kumar.jpg");
+    background-size: cover;
+    height: 10rem;
+    width: 10rem;
+    position: relative;
+}
+
+.student2{
+    font-size: 1.5rem;
+}
+
+/* person 3 */
+
+.person3{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 25rem;
+}
+.profile3{
+    border-radius: 50%;
+    background-image: url("pictures/Divyani\ Dalal.jpg");
+    background-size: contain;
+    height: 10rem;
+    width: 10rem;
+    position: relative;
+}
+
+.student3{
+    font-size: 1.5rem;  
+    margin-left: 2rem;
+}
+
+/* person 4 */
+
+.person4{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 25rem;
+}
+.profile4{
+    border-radius: 50%;
+    background-image: url("pictures/Mohammad\ Afnan\ Siddique.jpg");
+    background-size: contain;
+    height: 10rem;
+    width: 10rem;
+    position: relative;
+}
+
+.student4{
+    font-size: 1.5rem;  
+}
+
+/* person 5 */
+
+.person5{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 25rem;
+}
+.profile5{
+    border-radius: 50%;
+    background-image: url("pictures/anil\ gour.jpg");
+    background-size: cover;
+    height: 10rem;
+    width: 10rem;
+    position: relative;
+}
+
+.student5{
+    font-size: 1.5rem;  
+}
+
+
+/* special thanks */
+h1{
+    font-size: 3rem;
+    margin-left: 37vw;
+    margin-top: 5rem;
+    font-family: rajasthan_regular;
+}
+.S1{
+    width: 30vw;
+    display: flex;
+    margin-left: 10vw;
+    margin-top: 5rem;
+}
+.picture{
+    background-image: url("pictures/sarthak.jpg");
+    background-size: cover;
+    height: 10rem;
+    width: 10rem;
+    border-radius: 50%;
+}
+
+.name1{
+    font-size: 1.75rem;
+    position: absolute;
+    margin-left: 11rem;
+    margin-top:2rem;
+}
+
+.collage{
+    position:  absolute;
+    font-size: 1.25rem;
+    margin-left: 11rem;
+    margin-top: 4.5rem;
+}
+
+.S2{
+    width: 35vw;
+    display: flex;
+    margin-left: 60vw;
+    margin-top: 155vh;
+    position: absolute;
+}
+.picture_2{
+    background-image: url("pictures/kartik.jpg");
+    background-size: cover;
+    height: 10rem;
+    width: 10rem;
+    border-radius: 50%;
+}
+
+.name2{
+    font-size: 1.75rem;
+    position: absolute;
+    margin-left: 11rem;
+    margin-top: 2rem;
+}
+
+.collage_2{
+    position:  absolute;
+    font-size: 1.25rem;
+    margin-left: 11rem;
+    margin-top: 4.5rem;
+}
+
+.S3{
+    width: 30vw;
+    display: flex;
+    margin-left: 10vw;
+    margin-top: 9rem;
+}
+
+.picture_3{
+    background-image: url("pictures/Dr.\ sanyukta.jpg");
+    background-size: cover;
+    height: 10rem;
+    width: 10rem;
+    border-radius: 50%;
+}
+
+.name3{
+    font-size: 1.75rem;
+    position: absolute;
+    margin-left: 11rem;
+    margin-top: 2rem;
+}
+
+.collage_3{
+    position:  absolute;
+    font-size: 1.25rem;
+    margin-left: 11rem;
+    margin-top: 4.5rem;
+}
+
+.S4{
+    width: 35vw;
+    display: flex;
+    margin-left: 60vw;
+    margin-top: 200vh;
+    position: absolute;
+}
+
+.picture_4{
+    background-image: url("pictures/profile.jpg");
+    background-size: cover;
+    height: 10rem;
+    width: 10rem;
+    border-radius: 50%;
+}
+
+.name4{
+    font-size: 1.75rem;
+    position: absolute;
+    margin-left: 11rem;
+    margin-top: 2rem;
+}
+
+.collage_4{
+    position:  absolute;
+    font-size: 1.25rem;
+    margin-left: 11rem;
+    margin-top: 4.5rem;
+}
+
+.border{
+    margin-top: 10rem ;
+    background-image: url("slider photos/border.png");
+    height: 5rem;
+    width: 100%;
+    background-size: cover;
+}

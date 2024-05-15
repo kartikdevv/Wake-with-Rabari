@@ -1,0 +1,217 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+@font-face {
+    font-family: Rajasthan_regular;
+    src: url(Rajasthan\ Regular.ttf);
+    font-display: swap;
+}
+body{
+    min-height: 200vh;
+    background-image: url("slider bg/slider bg.png");
+    background-size: contain;
+}
+
+/* navigation bar */
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: 0.6s;
+    padding: 40px 100px;
+    z-index: 1000;
+    height: 5rem;
+}
+header .logo{
+    position: relative;
+    font-weight: 700;
+    color: black;
+    text-decoration: none;
+    text-align: center;
+    font-size: 2em;
+    letter-spacing: 2px;
+    transition: 0.6s;
+    font-family: Rajasthan_regular;
+}
+header ul{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header ul li{
+    position: relative;
+    list-style: none;
+}
+header ul li a{
+    position: relative;
+    margin: 0 15;
+    text-decoration: none;
+    color: black;
+    letter-spacing: 2px;
+    font-weight: 500px;
+    transition: 0.6s;
+    margin-left: 6rem;
+    font-size: 1.5rem;
+    font-family: Rajasthan_regular;
+}
+
+
+.links:hover{
+    transition: none;
+    color: #cd5424;
+}
+.contact:hover{
+    background-color: #cd5424;
+    transition: none;
+}
+
+
+header.sticky{
+    padding: 5px 100px;
+    background-color: #113247;
+}
+header.sticky .logo,header.sticky ul li a{
+    color: white;
+}
+
+#navigation_space{
+    height: 10rem;
+}
+
+/* body */
+
+.box1{
+    margin-left: 15vw;
+    width: 70vw;
+    display: flex;
+    justify-content: space-between;
+}
+#text1{
+    width: 32vw;
+    text-align: justify;
+    font-size: 125%;
+    line-height: 28px;
+}
+
+
+/* slider  */
+
+/* Style the slider container */
+.slider-container {
+    overflow: hidden; /* Prevent overflowing content */
+    position: relative; /* Allow absolute positioning for navigation */
+    height: 20rem;
+    width: 30vw;
+    
+}
+  
+  /* Style the slider track */
+.slider-track {
+    display: flex; /* Arrange images horizontally */
+    width: 30vw; /* Three times the width of the container */
+    height: 20rem;
+    transition: transform 0.5s ease-in-out; /* Smooth transition on slide change */
+}
+  
+  /* Style the individual slides (images) */
+.slide {
+    width: 100%; /* Occupy full width of the container */
+    height: 20rem;
+    object-fit: contain; /* Scale image to fill container while maintaining aspect ratio */
+}
+  
+.frame_border{
+    height: 20rem;
+    width: 31vw;
+    border: 2px solid grey;
+    padding: 0 0 0 7px;
+    object-fit: contain;
+}
+
+
+.pre-btn,.nxt-btn{
+    height: 2rem;
+    width: 1.5rem;
+    background-color: transparent;
+    position: absolute;
+    color: white;
+    border: none;
+    z-index: 100;
+    cursor: pointer;
+    font-size: 2rem;
+}
+
+.pre-btn{
+    left: 1rem;
+    margin-top: 30%;
+}
+.nxt-btn{
+    right: 1rem;
+    margin-top: 30%;
+}
+
+.box2{
+    width: 70vw;
+    text-align: justify;
+    font-size: 125%;
+    line-height: 28px;
+    margin-left: 14.5rem;
+    margin-top: 5rem;
+}
+
+/* box 3 */
+
+
+.box3{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 14.5rem;
+    margin-top: 5rem;
+    width: 70vw;
+}
+
+#img_3{
+    background-image: url("embroidery img/Stitches\ used.jpg");
+    height: 25rem;
+    width: 20vw;
+    background-size:contain;
+    background-repeat: no-repeat;
+
+}
+
+.text3{
+    width: 40vw;
+    height: 25rem;
+    text-align: justify ;
+    font-size: 125%;
+    line-height:30px ;
+    margin-top: 1.5rem;
+
+}
+
+
+.img_border_3{
+    height: 24rem;
+    width: 22vw;
+    border: 2px solid grey;
+    padding:5px 0px 5px 15px;
+}
+
+.border{
+    margin-top: 13rem ;
+    background-image: url("slider photos/border.png");
+    height: 5rem;
+    width: 100%;
+    background-size: cover;
+}
